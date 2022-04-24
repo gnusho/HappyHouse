@@ -5,6 +5,25 @@ $(document).ready(function() {
 		logoutBtn = name + "님 반갑습니다. " + "<input type='button' value='LogOut' id='logoutBtn' class='btn btn-primary'>";	
 		$("#loginDiv").html(logoutBtn);
 		$(".navbar-nav").append(`<li id="userBtn" class="nav-item"><a class="nav-link" href="/userInfo.html";">User</a></li>`)
+		$(".navbar-nav").append(`<li id="boardEditBtn" class="nav-item"><a class="nav-link" href="/boardEdit.html";">Board</a></li>`)
+	
+		$.get("../board/read", {
+			
+		}, function(data, status){
+			if(data == "fail"){
+				
+			} else {
+				let board=`<center><table class="table table-hover"><tr><th>글번호</th><th>제목</th><th>작성자</th></tr>`;
+				data.forEach(function(item){
+					 board += `<tr><td>${item.no}</td><td>${item.title}</td><td>${item.writerName}</td></tr>`;
+				});
+				board += `</table>`;
+				board +=`</center>`;
+				console.log(board);
+				
+				$("#boardDiv").html(board);
+			}
+		});
 	}
 	
 	$("#loginBtn").click(function(){

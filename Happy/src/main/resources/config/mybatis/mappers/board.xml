@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.happy.web.dao.BoardDAO">
+	<insert id="boardInsert" parameterType="boardVO">
+		insert board(title, content, writer, create_at)
+		values (#{title}, #{content}, #{writer}, now());
+	</insert>
+	
+	<select id="boardSelectAll" resultType="boardVO">
+		select b.no, b.title, (select name from user as u where u.no=b.writer) as writerName, create_at
+		from board as b
+		order by b.no desc
+		limit 5;
+	</select>
+</mapper>
