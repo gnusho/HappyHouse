@@ -20,4 +20,17 @@ public class BoardService {
 	public List<BoardVO> boardSelectAll() {
 		return boardDAO.boardSelectAll();
 	}
+
+	public BoardVO boardSelectOne(int no) {
+		return boardDAO.boardSelectOne(no);
+	}
+
+	public void boardUpdate(BoardVO vo) {
+		boardDAO.boardUpdate(vo);
+	}
+
+	public void boardDelete(int no) {
+		boardDAO.boardDelete(no);
+	}
+
 }

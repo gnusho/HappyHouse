@@ -16,4 +16,10 @@ public interface BoardDAO {
 
 	List<BoardVO> boardSelectAll() throws DataAccessException;
 
+	BoardVO boardSelectOne(int no) throws DataAccessException;
+
+	void boardUpdate(BoardVO vo) throws DataAccessException;
+
+	void boardDelete(int no) throws DataAccessException;
+
 }

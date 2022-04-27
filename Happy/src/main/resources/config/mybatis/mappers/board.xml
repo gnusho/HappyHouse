@@ -8,10 +8,26 @@
 		values (#{title}, #{content}, #{writer}, now());
 	</insert>
 	
+	<update id="boardUpdate" parameterType="boardVO">
+		update board 
+		set title = #{title}, content = #{content} 
+		where no = #{no}
+	</update>
+	
+	<delete id="boardDelete" parameterType="int">
+		delete from board 
+		where no = #{no};
+	</delete>
+	
 	<select id="boardSelectAll" resultType="boardVO">
 		select b.no, b.title, (select name from user as u where u.no=b.writer) as writerName, create_at
 		from board as b
-		order by b.no desc
-		limit 5;
+		order by b.no desc;
+	</select>
+	
+	<select id="boardSelectOne" parameterType="int" resultType="boardVO">
+		select *, (select name from user as u where u.no=b.writer) as writerName
+		from board as b
+		where no = #{no};
 	</select>
 </mapper>

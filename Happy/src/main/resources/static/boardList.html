@@ -52,9 +52,9 @@
 			<a class="navbar-brand text-brand" href="index.html">Estate<span
 				class="color-b">Agency</span></a>
 			<div class="collapsed justify-content-left" id="loginDiv">
-				<input type="text" id="loginId" placeholder="ID" size="5">
-				<input type="password" id="loginPw" placeholder="PW" size="5">
-                <input type="button" id="loginBtn" class="btn btn-primary" value="Login">     
+				<input type="text" id="loginId" placeholder="ID" size="5"> <input
+					type="password" id="loginPw" placeholder="PW" size="5"> <input
+					type="button" id="loginBtn" class="btn btn-primary" value="Login">
 			</div>
 
 			<div class="navbar-collapse collapse justify-content-center"
@@ -67,7 +67,7 @@
 					<li class="nav-item"><a class="nav-link" href="#"
 						onclick="window.open('assets/html/join.html', '_blank', 'toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=750,height=400');">Join</a>
 					</li>
-					
+
 				</ul>
 			</div>
 
@@ -81,110 +81,23 @@
 	</nav>
 	<!-- End Header/Navbar -->
 
-	<!-- ======= Intro Section ======= -->
-	<div class="intro intro-carousel swiper position-relative">
-
-		<div class="swiper-wrapper">
-
-			<div class="swiper-slide carousel-item-a intro-item bg-image"
-				style="background-image: url(assets/img/slide-1.jpg)">
-				<div class="overlay overlay-a"></div>
-				<div class="intro-content display-table">
-					<div class="table-cell">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="intro-body">
-										<p class="intro-title-top">
-											Doral, Florida <br> 78345
-										</p>
-										<h1 class="intro-title mb-4 ">
-											<span class="color-b">204 </span> Mount <br> Olive Road
-											Two
-										</h1>
-										<p class="intro-subtitle intro-price">
-											<a href="#"><span class="price-a">rent | $ 12.000</span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide carousel-item-a intro-item bg-image"
-				style="background-image: url(assets/img/slide-2.jpg)">
-				<div class="overlay overlay-a"></div>
-				<div class="intro-content display-table">
-					<div class="table-cell">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="intro-body">
-										<p class="intro-title-top">
-											Doral, Florida <br> 78345
-										</p>
-										<h1 class="intro-title mb-4">
-											<span class="color-b">204 </span> Rino <br> Venda Road
-											Five
-										</h1>
-										<p class="intro-subtitle intro-price">
-											<a href="#"><span class="price-a">rent | $ 12.000</span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swiper-slide carousel-item-a intro-item bg-image"
-				style="background-image: url(assets/img/slide-3.jpg)">
-				<div class="overlay overlay-a"></div>
-				<div class="intro-content display-table">
-					<div class="table-cell">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="intro-body">
-										<p class="intro-title-top">
-											Doral, Florida <br> 78345
-										</p>
-										<h1 class="intro-title mb-4">
-											<span class="color-b">204 </span> Alira <br> Roan Road
-											One
-										</h1>
-										<p class="intro-subtitle intro-price">
-											<a href="#"><span class="price-a">rent | $ 12.000</span></a>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper-pagination"></div>
-	</div>
 	<!-- End Intro Section -->
 
 	<main id="main">
 		<!-- ======= Services Section ======= -->
-    <section class="section-services section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Board</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section><!-- End Services Section -->
+		<section class="section-services section-t8">
+			<div class="container">
+				<div class="row" id="boardList">
+					<div class="col-md-12">
+					<h2 class="title-a">Board</h2>
+					<div id="boardDetailDiv"></div>
+					<h5 class="title-e">[목록]</h5>
+					<div id="boardDiv"></div>
+					</div>
+					<div id="boardWriteBtnDiv"></div>
+				</div>
+		</section>
+		<!-- End Services Section -->
 	</main>
 	<!-- End #main -->
 
@@ -248,8 +161,10 @@
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="assets/vendor/php-email-form/validate.js"></script>
 	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/my.js"></script>
